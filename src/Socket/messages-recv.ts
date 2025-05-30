@@ -731,6 +731,7 @@ export const makeMessagesRecvSocket = (config: SocketConfig) => {
 					const msg = await processNotification(node)
 					if (msg) {
 						const fromMe = areJidsSameUser(node.attrs.participant || remoteJid, authState.creds.me!.id)
+						console.log(node.attrs)
 						msg.key = {
 							remoteJid,
 							fromMe,
